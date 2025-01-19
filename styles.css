@@ -53,7 +53,7 @@ body {
     height: 100%;
 
     position: absolute;
-    z-index: 10;
+    z-index: 9;
 }
 
 .star__line1::before,
@@ -215,4 +215,27 @@ body {
     background-color: #121212;
 
     transition: background 1s;
+}
+
+.background__belial,
+.background__zagans {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+
+    font-family: "Jacquard 12", serif;
+    color: white;
+    text-align: center;
+    opacity: .7;
+    font-size: 1.2rem;
+}
+
+.background__belial {
+    left: 0;
+    color: rgba(255,59,59,0.7);
+}
+
+.background__zagans {
+    right: 0;
+    color: rgba(0,212,255,0.7);
 }
