@@ -226,8 +226,9 @@ body {
     font-family: "Jacquard 12", serif;
     color: white;
     text-align: center;
-    opacity: .7;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+
+    opacity: 0;
 }
 
 .background__belial {
@@ -238,4 +239,9 @@ body {
 .background__zagans {
     right: 0;
     color: rgba(0,212,255,0.7);
+}
+
+.background-show {
+    opacity: .7;
+    transition: opacity 3s;
 }

@@ -2,6 +2,8 @@ const main = document.getElementsByClassName('container')[0];
 const innerCircle = document.getElementsByClassName('star__inner-circle')[0];
 const logo = document.getElementsByClassName('logo')[0];
 const logoBackground = document.getElementsByClassName('logo__background')[0];
+const backgroundBelial = document.getElementsByClassName('background__belial')[0];
+const backgroundZagans = document.getElementsByClassName('background__zagans')[0];
 
 document.addEventListener('DOMContentLoaded', () => {  
     // Espera 2 segundos antes de aplicar la clase
@@ -13,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       logo.classList.add('logo--show');
       logoBackground.classList.add('logo__background--show');
+      backgroundBelial.classList.add('background-show');
+      backgroundZagans.classList.add('background-show');
     }, 3000);
   });
 
