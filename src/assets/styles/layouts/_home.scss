@@ -1,4 +1,4 @@
-@layer reset, display, colors-fonts;
+@layer reset, display, colors;
 
 @layer reset {
   html, body, div, span, applet, object, iframe,
@@ -122,6 +122,16 @@
     grid-row-end: center;
   }
 
+  @container (min-width: #{$bp-lg}) {
+    .middle-container {
+      grid-row-start: top;
+      grid-row-end: span 3;
+
+      grid-column-start: center;
+      grid-column-end: center;
+    }
+  }
+
   // Positioning of all middle elements so they are one on top of the other.
   .logo,
   .logo__background,
@@ -131,6 +141,12 @@
   }
 
   .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+
     z-index: 5;
 
     text-align: center;
@@ -147,6 +163,16 @@
 
     &__hidden {
       display: none;
+    }
+  }
+
+  @container (min-width: #{$bp-lg}) {
+    .logo {
+      &__background {
+        width: 75%;
+
+        left: 12.5%;
+      }
     }
   }
 
@@ -188,6 +214,40 @@
           grid-column-start: start;
           grid-column-end: span 3;
         }
+      }
+    }
+  }
+}
+
+@layer colors {
+  .container {
+    background-color: $black;
+  }
+
+  @supports (background-color: $black-p3) {
+    .container {
+      background-color: $black-p3;
+    }
+  }
+
+  .logo {
+    &__background {
+      background: linear-gradient(90deg, #{$red} 15%, #{$purple} 50%, #{$blue} 65%);
+    }
+
+    &__main {
+      color: $white;
+    }
+  }
+
+  @supports (background-color: $black-p3) {
+    .logo {
+      &__background {
+        background: linear-gradient(90deg, #{$red-p3} 0%, #{$purple-p3} 50%, #{$blue-p3} 100%);
+      }
+
+      &__main {
+        color: $white-p3;
       }
     }
   }

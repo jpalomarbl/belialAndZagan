@@ -11,9 +11,9 @@ $font-family-background: "Jacquard 12", serif;
 // Color palette HEX
 $white: #f1f1f1;
 $black: #121212;
-$red: #FF3B3B;
-$purple: #6A3BFF;
-$blue: #00D4FF;
+$red: #ff3b3b;
+$purple: #6a3bff;
+$blue: #00d4ff;
 
 // Color palette display-p3
 $white-p3: color(display-p3 0.949 0.949 0.949);
@@ -21,6 +21,11 @@ $black-p3: color(display-p3 0.071 0.071 0.071);
 $red-p3: color(display-p3 1.000 0.231 0.231);
 $purple-p3: color(display-p3 0.416 0.231 1.000);
 $blue-p3: color(display-p3 0.000 0.831 1.000);
+
+// Background-gradient mixin
+@mixin linear-gradient() {
+  background-color: linear-gradient(90deg, $red 0%, $purple 50%, $blue 100%);
+}
 
 // Breakpoints (adopted from Bootstrap 5.0's documentation)
 $bp-sm: 576px;
