@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" /> -->
+
+    <title>Belial & Zagan's</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <main class="container">
+      <div class="logo">
+        <h1 class="logo__hidden">Belial & Zagan's</h1>
+
+        <h1 class="logo__main--belial">Belial</h1>
+        <h1 class="logo__main--and">&</h1>
+        <h1 class="logo__main--zagans">Zagan's</h1>
+      </div>
+
+      <div class="logo__background"></div>
+
+      <div class="star__line-container">
+        <div class="star__line1"></div>
+        <div class="star__line2"></div>
+        <div class="star__line3"></div>
+        <div class="star__line4"></div>
+        <div class="star__line5"></div>
+      </div>
+
+      <div class="star__outer-circle">
+        <div class="star__inner-circle"></div>
+      </div>
+
+      <div class="background__belial"></div>
+      <div class="background__zagans"></div>
+
+      <!-- <script src="script.js"></script> -->
+    </main>
   </body>
 </html>
