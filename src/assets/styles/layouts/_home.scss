@@ -1,4 +1,4 @@
-@layer reset, display;
+@layer reset, display, colors-fonts;
 
 @layer reset {
   html, body, div, span, applet, object, iframe,
@@ -53,15 +53,25 @@
 }
 
 @layer display {
-  .container {
+  body {
     container-type: inline-size;
+  }
 
+  .container {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: [top] 25% [center] 50% [bottom] 25%;
 
     width: 100vw;
     height: 100dvh;
+  }
+
+  @container (min-width: #{$bp-lg}) {
+    .container {
+      position: relative;
+
+      grid-template-columns: [start] 25% [center] 50% [end] 25% !important;
+    }
   }
 
   .background {
@@ -81,6 +91,26 @@
     }
   }
 
+  @container (min-width: #{$bp-lg}) {
+    .background {
+      &__belial {
+        grid-row-start: center;
+        grid-row: center;
+
+        grid-column-start: start;
+        grid-column-end: start;
+      }
+
+      &__zagans {
+        grid-row-start: center;
+        grid-row: center;
+
+        grid-column-start: end;
+        grid-column-end: end;
+      }
+    }
+  }
+
   .middle-container {
     position: relative;
 
@@ -92,9 +122,11 @@
     grid-row-end: center;
   }
 
-  // Positioning of both middle elements so they are one on top of the other.
+  // Positioning of all middle elements so they are one on top of the other.
   .logo,
-  .logo__background {
+  .logo__background,
+  .star__line-container--mobile,
+  .star__outer-circle--mobile {
     position: absolute;
   }
 
@@ -115,6 +147,48 @@
 
     &__hidden {
       display: none;
+    }
+  }
+
+  .star {
+    &__line-container,
+    &__outer-circle {
+      width: 100%;
+      height: 100%;
+
+      z-index: 3;
+
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+
+  @container (min-width: #{$bp-lg}) {
+    .star {
+      &__line-container,
+      &__outer-circle {
+        width: 100%;
+        height: 100%;
+
+        z-index: 3;
+
+        &--mobile {
+          display: none;
+        }
+
+        &--desktop {
+          position: absolute;
+
+          display: block;
+
+          grid-row-start: top;
+          grid-row-end: span 3;
+
+          grid-column-start: start;
+          grid-column-end: span 3;
+        }
+      }
     }
   }
 }
