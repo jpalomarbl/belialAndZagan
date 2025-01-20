@@ -1,4 +1,4 @@
-@layer reset;
+@layer reset, display;
 
 @layer reset {
   html, body, div, span, applet, object, iframe,
@@ -49,5 +49,72 @@
   a {
     text-decoration: none;
     color: inherit;
+  }
+}
+
+@layer display {
+  .container {
+    container-type: inline-size;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: [top] 25% [center] 50% [bottom] 25%;
+
+    width: 100vw;
+    height: 100dvh;
+  }
+
+  .background {
+    &__belial,
+    &__zagans {
+      z-index: 0;
+    }
+
+    &__belial {
+      grid-row-start: top;
+      grid-row: top;
+    }
+
+    &__zagans {
+      grid-row-start: bottom;
+      grid-row: bottom;
+    }
+  }
+
+  .middle-container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-row-start: center;
+    grid-row-end: center;
+  }
+
+  // Positioning of both middle elements so they are one on top of the other.
+  .logo,
+  .logo__background {
+    position: absolute;
+  }
+
+  .logo {
+    z-index: 5;
+
+    text-align: center;
+
+    &__background {
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      z-index: 4;
+    }
+
+    &__hidden {
+      display: none;
+    }
   }
 }
