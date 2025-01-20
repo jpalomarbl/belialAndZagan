@@ -1,12 +1,29 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&family=Jacquard+12&family=Megrim&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+// Font families
+$font-family-belial: "Tourney", serif;
+$font-family-and: "Iceberg", serif;
+$font-family-zagans: "Tourney", serif;
+$font-family-background: "Jacquard 12", serif;
 
-$mqMinWidth: 420px;
+// Color palette HEX
+$white: #f1f1f1;
+$black: #121212;
+$red: #FF3B3B;
+$purple: #6A3BFF;
+$blue: #00D4FF;
+
+// Color palette display-p3
+$white-p3: color(display-p3 0.949 0.949 0.949);
+$black-p3: color(display-p3 0.071 0.071 0.071);
+$red-p3: color(display-p3 1.000 0.231 0.231);
+$purple-p3: color(display-p3 0.416 0.231 1.000);
+$blue-p3: color(display-p3 0.000 0.831 1.000);
+
+$bp-sm: 576px;
+$bp-md: 468px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
