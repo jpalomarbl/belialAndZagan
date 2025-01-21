@@ -1,4 +1,4 @@
-@layer reset, display, colors;
+@layer reset, display, colors, fonts, shapes;
 
 @layer reset {
   html, body, div, span, applet, object, iframe,
@@ -248,6 +248,26 @@
 
       &__main {
         color: $white-p3;
+      }
+    }
+  }
+}
+
+@layer fonts {
+  .logo {
+    &__main {
+      font-size: 5rem;
+
+      &--belial {
+        font-family: $font-family-belial;
+      }
+
+      &--and {
+        font-family: $font-family-and;
+      }
+
+      &--zagans {
+        font-family: $font-family-zagans;
       }
     }
   }
