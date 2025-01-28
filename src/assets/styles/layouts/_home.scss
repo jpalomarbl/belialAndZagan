@@ -140,6 +140,17 @@
     position: absolute;
   }
 
+  // .star__line-container {
+  //   width: 100%;
+  //   height: 100%;
+  // }
+
+  // @container (min-width: #{$bp-lg}) {
+  //   .star__line-container {
+  //     width: 40%;
+  //   }
+  // }
+
   .logo {
     display: flex;
     align-items: center;
@@ -229,7 +240,21 @@
           position: absolute;
 
           display: block;
+        }
+      }
 
+      &__line-container {
+        &--desktop {
+          grid-row-start: top;
+          grid-row-end: span 3;
+
+          grid-column-start: center;
+          grid-column-end: center;
+        }
+      }
+
+      &__outer-circle {
+        &--desktop {
           grid-row-start: top;
           grid-row-end: span 3;
 
@@ -239,6 +264,8 @@
       }
     }
   }
+
+
 }
 
 @layer colors {
@@ -370,5 +397,12 @@
     &__inner-circle {
       clip-path: circle(50% at 50% 50%);
     }
+  }
+}
+
+@layer star-lines {
+  .star_line {
+    width: 100%;
+    height: 100%;
   }
 }
